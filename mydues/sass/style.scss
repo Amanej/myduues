@@ -1,0 +1,22 @@
+body {
+  div {
+    h1 {
+      text-align: center;
+    }
+    div.myCalendar {
+      td {
+        cursor: pointer;
+      }
+    }
+    div.todaysDue {
+      display: none;
+      p {
+        &.backToCalendar {
+          cursor: pointer;
+          text-decoration: underline;
+          color: lightblue;
+        }
+      }
+    }
+  }
+}

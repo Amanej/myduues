@@ -1,0 +1,38 @@
+<head>
+  <title>mydues</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>MyDues</h1>
+
+    {{> calendar}}
+    {{> todoDate}}
+  </div>
+</body>
+
+<template name="calendar">
+  <div class="myCalendar">
+    <div class="container-fluid">
+      {{> fullcalendar }}
+    </div>
+  </div>
+</template>
+
+<template name="todoDate">
+  <div class="todaysDue">
+    <h1>To duuuues</h1>
+    <h2>{{date}}</h2>
+    <p class="backToCalendar">Back</p>
+    <ul>
+      {{#each dues}}
+          <li>{{text}}</li>
+        {{else}}
+          <p>Add a due</p>
+      {{/each}}
+    </ul>
+    <form class="addDueForm">
+      <input type="text" name="addDue" class="addDue" placeholder="Add a due" />
+    </form>
+  </div>
+</template>
